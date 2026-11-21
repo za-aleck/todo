@@ -72,12 +72,10 @@ render()
 
 const search = document.querySelector('.search')
 let query = ''
-
 search.oninput = function () {
   query = search.value.trim().toLowerCase()
   search_1()
 }
-console.log(query)
 function search_1() {
   ul.innerHTML = ''
 
@@ -86,7 +84,9 @@ function search_1() {
   )
 
   if (filtered.length === 0) {
+    
     const li = document.createElement('li')
+    li.classList.add('search-li')
     li.textContent = query ? 'Ничего не найдено' : 'Список пуст'
     todo.append(ul)
     ul.append(li)
