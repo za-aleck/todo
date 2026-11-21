@@ -78,7 +78,7 @@ search.oninput = function () {
 }
 function search_1() {
   ul.innerHTML = ''
-
+  input.value-''
   const filtered = product.filter(p =>
     p.name.toLowerCase().includes(query)
   )
@@ -98,3 +98,78 @@ for(let i = 0; i < filtered.length; i++) {
   }
 }
 search_1()
+
+
+
+//футер активные
+const btnActive = document.querySelector('.btn-active')
+btnActive.onclick=active
+function active() {
+ ul.innerHTML = ''
+  const filteredActive = product.filter(p =>
+    p.edited == false
+  )
+
+if(filteredActive.length === 0) {
+    
+    const li = document.createElement('li')
+    li.classList.add('search-li')
+    li.textContent = filteredActive ? 'Ничего не найдено' : 'Список пуст'
+    todo.append(ul)
+    ul.append(li)
+    return
+  }
+
+for(let i = 0; i < filteredActive.length; i++) {
+    ul.prepend(getItem(i, filteredActive[i]))
+  
+}
+}
+//футер неактивные
+const btnNoActive = document.querySelector('.btn-noactive')
+btnNoActive.onclick=noActive
+function noActive() {
+ ul.innerHTML = ''
+  const filteredNoActive = product.filter(p =>
+    p.edited == true
+  )
+
+if(filteredNoActive.length === 0) {
+    
+    const li = document.createElement('li')
+    li.classList.add('search-li')
+    li.textContent = filteredNoActive ? 'Ничего не найдено' : 'Список пуст'
+    todo.append(ul)
+    ul.append(li)
+    return
+  }
+
+for(let i = 0; i < filteredNoActive.length; i++) {
+    ul.prepend(getItem(i, filteredNoActive[i]))
+  
+}
+}
+//футер все
+const btn_All = document.querySelector('.btn-all')
+btn_All.onclick= btnAll
+function btnAll() {
+ ul.innerHTML = ''
+ // const filteredBtnAll = product.filter(p =>
+  //  p.edited
+//  )
+
+if(product.length === 0) {
+    
+    const li = document.createElement('li')
+    li.classList.add('search-li')
+    li.textContent = product ? 'Ничего не найдено' : 'Список пуст'
+    todo.append(ul)
+    ul.append(li)
+    return
+  }
+
+for(let i = 0; i < product.length; i++) {
+    ul.prepend(getItem(i,product[i]))
+  
+}
+}
