@@ -5,7 +5,7 @@
 }
 .block__input{
     max-width: 100%;
-    width: 420px;
+    width: 720px;
     background: grey;
     display: flex;
     align-items: center;
@@ -30,7 +30,7 @@ body{
    font-size: 16px;
     padding: 5px;
     max-width:100%;
-    width:420px;
+    width:720px;
     outline: none; 
 }
 .btn{
@@ -80,7 +80,7 @@ li{
     background:black;
     padding:0 5px;
     border:2px solid grey;
-    width: 420px;
+    width: 720px;
     max-width: 100%;
     color: white;
     text-align: center;
