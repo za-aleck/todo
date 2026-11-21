@@ -68,3 +68,33 @@ function render(){
 }
 
 render()
+//поиск
+
+const search = document.querySelector('.search')
+let query = ''
+
+search.oninput = function () {
+  query = search.value.trim().toLowerCase()
+  search_1()
+}
+console.log(query)
+function search_1() {
+  ul.innerHTML = ''
+
+  const filtered = product.filter(p =>
+    p.name.toLowerCase().includes(query)
+  )
+
+  if (filtered.length === 0) {
+    const li = document.createElement('li')
+    li.textContent = query ? 'Ничего не найдено' : 'Список пуст'
+    todo.append(ul)
+    ul.append(li)
+    return
+  }
+
+for(let i = 0; i < filtered.length; i++) {
+    ul.prepend(getItem(i, filtered[i]))
+  }
+}
+search_1()

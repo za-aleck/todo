@@ -3,14 +3,9 @@
     margin: 5px;
     
 }
-.block{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 .block__input{
     max-width: 100%;
-    width: 500px;
+    width: 320px;
     background: grey;
     display: flex;
     align-items: center;
@@ -25,6 +20,13 @@ body{
     padding: 5px;
     width:100%;
     outline: none;
+}
+.search{
+   font-size: 16px;
+    padding: 5px;
+    max-width:100%;
+    width:320px;
+    outline: none; 
 }
 .btn{
     margin-left: 5px;
@@ -48,8 +50,6 @@ li{
     justify-content:space-between;
     align-items: center;
     overflow-wrap: break-word;
-    font-size: 22px;
-
 }
 .btn-edit{
     color:black;
@@ -57,26 +57,18 @@ li{
     margin-left:auto;
     height: 30px;
     font-size: 15px;
-    cursor: pointer;
     
 }
 .btn-delete{
     margin-left: 8px;
-    margin-right: 0;
     height: 30px;
     font-size: 15px;
-    cursor: pointer;
 }
 .btn-edit.active{
     color:green;
 }
 .todo{
-    width: 100%;
-    max-width: 500px;
     background:black;
     padding: 5px;
     border:2px solid grey;
-    color: white;
-    font-size: 20px;
-    text-align: center;
 }
