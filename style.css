@@ -76,4 +76,7 @@ li{
     background:black;
     padding: 5px;
     border:2px solid grey;
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
