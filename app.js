@@ -78,7 +78,6 @@ search.oninput = function () {
 }
 function search_1() {
   ul.innerHTML = ''
-  input.value-''
   const filtered = product.filter(p =>
     p.name.toLowerCase().includes(query)
   )
