@@ -97,7 +97,7 @@ for(let i = 0; i < filtered.length; i++) {
     ul.prepend(getItem(i, filtered[i]))
   }
 }
-search_1()
+//search_1()
 
 
 
